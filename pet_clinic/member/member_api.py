@@ -6,7 +6,7 @@ from flask_request_validator import validate_params, Param, JSON, Pattern
 mem = Blueprint('mem', __name__, url_prefix='/api/member')
 
 
-# 회원 가입 : 중복 확인
+# 회원 가입 : 중복 확인, 비번암호화(https://scribblinganything.tistory.com/197)
 # 회원 정보 수정
 # 로그인
 
