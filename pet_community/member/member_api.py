@@ -4,7 +4,7 @@ import re
 from flask import Blueprint, current_app, request
 from flask_login import login_user, logout_user, current_user
 from flask_request_validator import validate_params, Param, JSON, Pattern, ValidRequest, MaxLength
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash
 
 from pet_community.member.memManager import MemManager, User
 from pet_community.board.boardManager import BoardManager

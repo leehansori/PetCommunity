@@ -242,7 +242,7 @@ class BoardManager:
         try:
             with conn_pool.getconn() as conn:
                 with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
-                    sql = "SELECT content, regdate, updatedate FROM reply " \
+                    sql = "SELECT id, content, regdate, updatedate FROM reply " \
                           "WHERE posting_id = %s order by regdate desc"
 
                     cur.execute(sql, [posting_id])

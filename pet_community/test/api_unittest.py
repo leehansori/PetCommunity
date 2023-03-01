@@ -29,8 +29,7 @@ class APITestCase(unittest.TestCase):
             'id': 'aaa111@naver.com',
             'pw': 'Aaa111@',
             'name': '이한솔',
-            'phone': '010-8812-4150',
-            'regdate': '20230301',
+            'phone': '010-8812-4150'
         }
         print(body_data)
 
@@ -92,7 +91,7 @@ class APITestCase(unittest.TestCase):
 
         response_print(url, response)
 
-    def test_del_board(self, board_id=15):
+    def test_del_board(self, board_id=1):
         """
         게시판 삭제
         """
@@ -101,7 +100,7 @@ class APITestCase(unittest.TestCase):
 
         response_print(url, response)
 
-    def test_rgst_posting(self, board_id=16):
+    def test_rgst_posting(self, board_id=1):
         """
         게시물 등록
         """
@@ -117,7 +116,7 @@ class APITestCase(unittest.TestCase):
 
         response_print(url, response)
 
-    def test_post_list(self, board_id=14):
+    def test_post_list(self, board_id=1):
         """
         게시물 목록 조회
         """
@@ -150,7 +149,7 @@ class APITestCase(unittest.TestCase):
 
         response_print(url, response)
 
-    def test_rgst_reply(self, posting_id=4):
+    def test_rgst_reply(self, posting_id=1):
         """
         댓글 등록
         """
@@ -165,7 +164,7 @@ class APITestCase(unittest.TestCase):
 
         response_print(url, response)
 
-    def test_reply_list(self, posting_id=4):
+    def test_reply_list(self, posting_id=1):
         """
         댓글 목록 조회
         """
@@ -174,7 +173,7 @@ class APITestCase(unittest.TestCase):
 
         response_print(url, response)
 
-    def test_mod_reply(self, reply_id=4):
+    def test_mod_reply(self, reply_id=1):
         """
         댓글 수정
         """
@@ -188,7 +187,7 @@ class APITestCase(unittest.TestCase):
 
         response_print(url, response)
 
-    def test_del_reply(self, reply_id=4):
+    def test_del_reply(self, reply_id=1):
         """
         댓글 삭제
         """
