@@ -2,8 +2,16 @@
 ### 1. 환경
 - web server : flask (python)
 - DB : postgresql
-
-### 2. 프로젝트 구조
+### 2. 실행 방법 (cmd)
+1. 프로젝트 경로로 이동
+2. 실행에 필요한 패키지 설치 <br>
+pip install -r requirements.txt
+3. DB 설정 <br>
+utils > config.py에서 DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD 수정
+4. 실행 <br>
+set FLASK_APP=pet_community
+flask run
+### 3. 프로젝트 구조
 ```txt
 pet_community
 │  config.py 
