@@ -11,9 +11,9 @@ from pet_community.board.boardManager import BoardManager
 """
 
 # blueprint 등록
-board = Blueprint('board', __name__, url_prefix='/api/board')
-post = Blueprint('post', __name__, url_prefix='/api/post')
-reply = Blueprint('reply', __name__, url_prefix='/api/reply')
+board = Blueprint('board', __name__, url_prefix='/board')
+post = Blueprint('post', __name__, url_prefix='/post')
+reply = Blueprint('reply', __name__, url_prefix='/reply')
 
 
 @board.route("/list", methods=['GET'])

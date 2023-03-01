@@ -18,6 +18,7 @@ def create_app():
     app.register_blueprint(board_api.board)
     app.register_blueprint(board_api.post)
     app.register_blueprint(board_api.reply)
+    app.register_blueprint(member_api.app)
 
     # flask log-in
     login_manager = LoginManager()
@@ -28,7 +29,7 @@ def create_app():
     if not app.debug:
         # 파일에 저장 (정해진 사이즈를 넘어가면 새로운 파일에 저장)
         file_handler = RotatingFileHandler(
-            'C:/Users/SFX14-41G/PycharmProjects/petCommunity/pet_community.log',  # 파일 이름 (경로 포함)
+            './pet_community.log',  # 파일 이름 (경로 포함)
             encoding='utf-8',
             maxBytes=(1024 * 1024 * 1),  # 하나의 파일 사이즈 (현재 1 MB)
             backupCount=10  # 파일 갯수

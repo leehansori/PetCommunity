@@ -18,7 +18,7 @@ def response_print(url, response):
 class APITestCase(unittest.TestCase):
 
     def setUp(self):
-        self.api_url = 'http://localhost:5000/api/'
+        self.api_url = 'http://localhost:5000/'
         self.test_login()
 
     def test_rgst_mem(self):

@@ -15,7 +15,8 @@ from pet_community.board.boardManager import BoardManager
 """
 
 # blueprint 등록
-mem = Blueprint('mem', __name__, url_prefix='/api/member')
+mem = Blueprint('mem', __name__, url_prefix='/member')
+app = Blueprint('app', __name__, url_prefix='/')
 
 
 @mem.route("/register", methods=['POST'])
