@@ -13,24 +13,19 @@ pet_community
 │  │  boardManager.py
 │  └─ board_api.py
 │          
-├─member
+├─member // 회원 관련 API, DB 메소드 정의
 │  │  member_api.py
 │  └─ memManager.py  
 │          
-├─test
+├─test // API test를 위한 unittest (API가 정의 되어 있습니다.)
 │  └─ api_unittest.py
 │          
-└─utils
+└─utils // 기타 공통 메소드와 유효값 검증을 위한 error_handler
     │  common.py
     │  error_handler.py
     └─ response.py
 ```
 
-- board : 게시판 관련 API, DB 메소드 정의
-- member : 회원 관련 API, DB 메소드 정의
-- test : API test를 위한 unittest (API가 정의 되어 있습니다.)
-- utils : 기타 공통 메소드와 유효값 검증을 위한 error_handler
----
 - pet_community.ddl : pet_community.ddl
 - requirements.txt : 프로젝트 실행을 위한 설치 정보
 - swagger_API.yaml : swagger
