@@ -9,7 +9,7 @@ pet_community
 │  config.py 
 │  __init__.py
 │  
-├─board
+├─board // 게시판 관련 API, DB 메소드 정의
 │  │  boardManager.py
 │  └─ board_api.py
 │          
