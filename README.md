@@ -13,7 +13,7 @@ pip install -r requirements.txt
 3. DB 설정 <br>
 utils > config.py에서 DB_HOST, DB_NAME, DB_USERNAME, DB_PASSWORD 수정
 4. 실행 <br>
-set FLASK_APP=pet_community
+set FLASK_APP=pet_community <br>
 flask run
 ### 3. 프로젝트 구조
 ```txt
