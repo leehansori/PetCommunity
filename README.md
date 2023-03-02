@@ -1,6 +1,6 @@
 # petCommunity (이한솔)
 ### 1. 환경
-- web server : flask (python)
+- web framework : flask (python)
 - DB : postgresql
 ### 2. 실행 방법
 #### 2.1 클라우드 서버
