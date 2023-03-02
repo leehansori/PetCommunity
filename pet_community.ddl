@@ -85,7 +85,7 @@ CREATE TABLE reply
     CONSTRAINT fk_posting_id FOREIGN KEY(posting_id) REFERENCES "posting"(posting_id) ON DELETE CASCADE
 );
 
-COMMENT ON TABLE "reply" IS '게시글을 위한 테이블';
+COMMENT ON TABLE "reply" IS '댓글을 위한 테이블';
 COMMENT ON COLUMN "reply"."reply_id" IS '댓글id';
 COMMENT ON COLUMN "reply"."posting_id" IS '게시물id';
 COMMENT ON COLUMN "reply"."id" IS '이메일(id)';
