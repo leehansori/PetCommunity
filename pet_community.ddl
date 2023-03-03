@@ -1,7 +1,7 @@
 -- member Table Create SQL
 CREATE TABLE member
 (
-    id              VARCHAR(50)     NOT NULL,
+    id              VARCHAR(50)     NOT NULL   UNIQUE,
     pw              VARCHAR(200)    NOT NULL,
     name            VARCHAR(50)     NOT NULL,
     phone           VARCHAR(11)     NULL,
@@ -22,7 +22,7 @@ COMMENT ON SEQUENCE "seq_board_id" IS '게시판id에 대한 시퀀스';
 
 CREATE TABLE board
 (
-    board_id        integer         DEFAULT nextval('seq_board_id'),
+    board_id        integer         DEFAULT nextval('seq_board_id')    UNIQUE,
     id              VARCHAR(50)     NOT NULL,
     title           VARCHAR(50)     NOT NULL,
     regdate         VARCHAR(8)      NOT NULL,
@@ -44,14 +44,14 @@ COMMENT ON SEQUENCE "seq_posting_id" IS '게시글id에 대한 시퀀스';
 
 CREATE TABLE posting
 (
-    posting_id      integer         DEFAULT nextval('seq_posting_id'),
-    board_id        integer		  NOT NULL,
+    posting_id      integer         DEFAULT nextval('seq_posting_id')   UNIQUE,
+    board_id        integer		    NOT NULL,
     id              VARCHAR(50)     NOT NULL,
     title           VARCHAR(50)     NOT NULL,
-    CONTENT		   TEXT		  NOT NULL,
+    CONTENT		    TEXT		    NOT NULL,
     regdate         VARCHAR(8)      NOT NULL,
     updatedate      VARCHAR(8)      NULL,
-    del_yn		   boolean         NULL,
+    del_yn		    boolean         NULL,
     PRIMARY KEY (posting_id),
     CONSTRAINT fk_id FOREIGN KEY(id) REFERENCES "member"(id) ON DELETE CASCADE,
     CONSTRAINT fk_board_id FOREIGN KEY(board_id) REFERENCES "board"(board_id)
@@ -74,7 +74,7 @@ COMMENT ON SEQUENCE "seq_reply_id" IS '댓글에 대한 시퀀스';
 
 CREATE TABLE reply
 (
-    reply_id        integer         DEFAULT nextval('seq_reply_id'),
+    reply_id        integer         DEFAULT nextval('seq_reply_id')    UNIQUE,
     posting_id      integer		  NOT NULL,
     id              VARCHAR(50)     NOT NULL,
     content		   TEXT		  NOT NULL,
