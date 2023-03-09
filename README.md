@@ -1,4 +1,4 @@
-# petCommunity (이한솔)
+# petCommunity
 ### 1. 환경
 - web framework : flask (python)
 - DB : postgresql
