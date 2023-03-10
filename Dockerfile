@@ -12,3 +12,6 @@ RUN pip install requests==2.28.2
 COPY ./petCommunity /app
 ENV PYTHONPATH "${PYTHONPATH}:/app"
 WORKDIR /app
+
+# 이미지 빌드
+# docker build -t petcommunity:0.1 .
