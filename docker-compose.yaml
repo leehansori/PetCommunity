@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  petcommunity:
+    image: petcommunity:0.1
+    container_name: petcommunity
+    ports:
+      - "5000:5000"
+    environment:
+      TZ: Asia/Seoul
+      FLASK_APP: pet_community
+    command: flask run --host 0.0.0.0
+    networks:
+      - petcommunity-net
+    restart: always
+networks:
+  petcommunity-net:
