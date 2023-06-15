@@ -29,7 +29,7 @@ class APITestCase(unittest.TestCase):
             'id': 'aaa111@naver.com',
             'pw': 'Aaa111@',
             'name': '이한솔',
-            'phone': '010-8812-4150'
+            'phone': '010-1111-2222'
         }
         print(body_data)
 
